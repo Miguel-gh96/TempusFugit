@@ -1,6 +1,18 @@
-<html>
-<head></head>
-<h1>Hello World!
-<body>
-</body>
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+<head>
+  <title>Nos Falta Uno</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js">
+  </script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js">
+  </script>
+  <script type="text/javascript" src="bin/app.js"></script>
+</head>
+    <body ng-controller="MainController">
+      <div class="content-wrapper" ng-view></div>
+      <!--<div ng-include src="'views/footer.view.html'"></div>-->
+    </body>
 </html>
