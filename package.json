@@ -1,0 +1,29 @@
+{
+  "name": "nfu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "g": "node_modules/gulp/bin/gulp.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Miguel-gh96/nfu_alfa.git"
+  },
+  "author": "Miguel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Miguel-gh96/nfu_alfa/issues"
+  },
+  "homepage": "https://github.com/Miguel-gh96/nfu_alfa#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "require-all": "^2.0.0",
+    "underscore": "^1.8.3"
+  },
+  "dependencies": {
+    "foreman": "2.0.0"
+  }
+}
