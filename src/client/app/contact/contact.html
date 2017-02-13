@@ -1,0 +1,43 @@
+<section id="contact-view" class="container mainbar">
+  <section class="matter">
+    <div class="container">
+      <h1>Contact</h1>
+        <!-- BEGAIN CONTACT FORM -->
+        <div class="col-lg-5 col-md-5 col-sm-5">
+          <div class="contact_form">
+            <!-- FOR CONTACT FORM MESSAGE -->
+            <div id="form-messages"></div>
+            <form id="contact_form" name="contact_form" class="form-contact" novalidate method="POST" ng-submit="vm.submit()">
+              <div class="control-group inputs">
+                <input required ng-model="vm.name" ng-pattern="/^[0-9a-zA-Z]{2,20}$/" type="text" id="name" name="name" placeholder="Nombre *" class="form-control input-block-level" dir="auto" maxlength="100">
+                <span ng-show="contact_form.name.$error.required && (contact_form.name.$dirty || contact_form.name.$touched)" class="text-danger">Campo obligatorio</span>
+                <span ng-show="contact_form.name.$error.pattern" class="text-danger">El nombre debe ser de 2 a 20 caracteres</span>
+              </div>
+              <div class="control-group inputs">
+                <input required ng-model="vm.email" ng-pattern="/^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/" type="text" id="email" name="email" placeholder="Email *" class="form-control input-block-level" maxlength="100">
+                <span ng-show="contact_form.email.$error.required && (contact_form.email.$dirty || contact_form.email.$touched)" class="text-danger">Campo obligatorio</span>
+                <span ng-show="contact_form.email.$error.pattern" class="text-danger">Error formato email (ejemplo@ejemplo.com)</span>
+              </div>
+              <div class="control-group">
+                <label for="subject">Subject</label>
+                <select ng-model="vm.subject" class="form-control" id="subject" name="subject" title="Choose subject">
+                  <option value="bugs_reports">Reportar errores de la página</option>
+                  <option value="info">Información sobre el funcionamiento</option>
+                  <option value="work">Trabaja con nosotros</option>
+                </select>
+              </div>
+              <br />
+              <br />
+              <div class="control-group">
+                <textarea required ng-model="vm.message" class="form-control input-block-level" id="message" name="message" cols="30" rows="10" placeholder="Tu mensaje...*" dir="auto"></textarea>
+                <span ng-show="contact_form.message.$error.required && (contact_form.message.$dirty || contact_form.message.$touched)" class="text-danger">Campo obligatorio</span>
+              </div>
+              <input type="hidden" name="token" value="contact_form" />
+              <input class="submit_btn" id="submitBtn" type="submit" value="Send" />
+              <div id="resultMessage" style="display: none;"></div>
+            </form>
+          </div>
+        </div>
+    </div>
+</section>
+</section>
